@@ -56,6 +56,8 @@ body {
 .header {
   display: flex;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-navigation {
@@ -165,8 +167,17 @@ body {
 
 .hero {
   padding: 188px 0;
-  background: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/people-office\ 1.jpg");
+  background-size: cover;
 }
+
+/* .hero-dark-bg {
+  background-image: ;
+} */
 
 .hero-container {
   display: flex;
@@ -215,8 +226,44 @@ body {
 /* -----------SECTION 1------------- */
 
 #section-first {
+  padding-top: 120px;
   padding-bottom: 0;
-  padding: 120px 0;
+}
+
+.svg-item {
+  width: 264px;
+  height: 112px;
+  background: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.first-svg {
+  background-image: url("../images/antenna\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}
+
+.second-svg {
+  background-image: url("../images/clock\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}
+
+.third-svg {
+  background-image: url("../images/diagram\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
+}
+
+.fourth-svg {
+  background-image: url("../images/astronaut\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 64px 64px;
 }
 
 .first-list {
@@ -308,7 +355,7 @@ body {
 }
 
 .third-text {
-  width: 232px;
+  min-width: 232px;
   padding: 32px 16px;
   display: flex;
   flex-direction: column;
@@ -331,6 +378,69 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #434455;
+  margin-bottom: 8px;
+}
+
+.social-list {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-list-link {
+  width: 40px;
+  height: 40px;
+  background: #4d5ae5;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.social-list-icon {
+  width: 16px;
+  height: 16px;
+  color: #f4f4fd;
+}
+
+/* ----------SECTION 4----------- */
+
+.fourth-head {
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 72px;
+}
+
+.fourth-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.fourth-item {
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth-svgs {
+  width: 168px;
+  max-height: 88px;
+}
+
+.fourth-logo {
+  max-width: 104px;
+  min-height: 56px;
+  padding: 16px 32px;
 }
 
 /* -----------FOOTER------------- */
@@ -342,12 +452,15 @@ body {
   margin: 0 auto;
 }
 
+.footer-container {
+  display: flex;
+}
+
 .footer-div {
   height: 112px;
 }
 
 .footer-logo {
-  display: inline-block;
   margin-bottom: 16px;
 }
 
@@ -371,6 +484,36 @@ body {
   letter-spacing: 0.02em;
   color: #e7e9fc;
   margin-top: 16px;
+}
+
+.footer-soc {
+  margin-left: 120px;
+}
+
+.soc-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-content: center;
+  background: #4d5ae5;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.footer-social-icon {
+  width: 24px;
+  height: 24px;
 }
 
 /* Portfolio */
@@ -435,6 +578,15 @@ body {
   width: calc((100% - 48px) / 3);
 }
 
+.project-link {
+}
+
+.project-item:is(:hover, :focus) {
+  border: 1px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .project-div {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -448,7 +600,6 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-top: 32px;
   margin-bottom: 8px;
 }
 
@@ -457,7 +608,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  margin-bottom: 64px;
 }
 
 /* пример смены цвета при наведении на елемент
